@@ -7,17 +7,18 @@ import android.widget.TextView;
 
 public class CalculatorActivity extends AppCompatActivity {
 
-    TextView calc_tv;
-
-    double first_number = 0;
-    double second_number = 0;
-
-    String operation = "";
+    private TextView calc_tv;
+    private double first_number = 0;
+    private double second_number = 0;
+    private String operation = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_calculator);
 
         calc_tv = findViewById(R.id.calc_tv);
     }
@@ -92,7 +93,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
         String tag = view.getTag().toString();
         String current_text = calc_tv.getText().toString();
-        String new_text = "";
+        String new_text;
 
         switch (tag) {
             case ".":

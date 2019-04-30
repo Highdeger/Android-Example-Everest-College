@@ -34,4 +34,11 @@
         android:tag="service_test"
         android:onClick="goto_somewhere"
         android:text="Service Test" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="sharedpref_test"
+        android:onClick="goto_somewhere"
+        android:text="SharedPreferences Test" />
 </LinearLayout>

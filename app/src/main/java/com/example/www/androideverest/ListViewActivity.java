@@ -26,6 +26,9 @@ public class ListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
 
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_listview);
+
         myListView = findViewById(R.id.my_list_view);
 
         names = new ArrayList<>();

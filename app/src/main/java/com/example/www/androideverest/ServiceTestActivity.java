@@ -35,6 +35,9 @@ public class ServiceTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_test);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_service_test);
     }
 
     public void startServiceTest(View v) {

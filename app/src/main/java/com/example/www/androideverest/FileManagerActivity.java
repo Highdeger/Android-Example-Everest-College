@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class FileManagerActivity extends AppCompatActivity {
@@ -28,6 +29,9 @@ public class FileManagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_manager);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_file_manager);
 
         listView = findViewById(R.id.file_list_view);
 
@@ -60,6 +64,12 @@ public class FileManagerActivity extends AppCompatActivity {
         for (File file : files) {
             adapter.add(file.getName());
         }
+        adapter.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

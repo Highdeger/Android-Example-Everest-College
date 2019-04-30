@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import java.io.File;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
             case "service_test":
                 startActivity(new Intent(MainActivity.this, ServiceTestActivity.class));
+                break;
+
+            case "sharedpref_test":
+                startActivity(new Intent(MainActivity.this, SharedPreferencesActivity.class));
                 break;
         }
     }
