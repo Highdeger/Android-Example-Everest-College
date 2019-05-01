@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ForegroundServiceTestActivity"></activity>
+        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".ForegroundServiceTestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,10 +42,16 @@
             android:name=".ServiceTest"
             android:enabled="true"
             android:exported="false" />
-
-        <service android:name=".ForegroundServiceTest"
+        <service
+            android:name=".ForegroundServiceTest"
             android:enabled="true"
             android:exported="false" />
+
+        <receiver android:name=".NotificationActionReceiver">
+            <intent-filter>
+                <action android:name="com.example.www.androideverest.NOTIFICATION_ACTION" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

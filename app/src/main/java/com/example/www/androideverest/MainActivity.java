@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
             case "fore_service_test":
                 startActivity(new Intent(MainActivity.this, ForegroundServiceTestActivity.class));
                 break;
+
+            case "notification":
+                startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+                break;
         }
     }
 }
