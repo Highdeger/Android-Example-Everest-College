@@ -12,4 +12,16 @@
         android:layout_height="wrap_content"
         android:onClick="show_default"
         android:text="Show Default Notification" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="show_custom"
+        android:text="Show Custom Notification" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="send_broadcast_to_my_receiver"
+        android:text="Send a Broadcast to NotificationReceiver" />
 </LinearLayout>

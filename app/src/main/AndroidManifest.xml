@@ -47,9 +47,10 @@
             android:enabled="true"
             android:exported="false" />
 
-        <receiver android:name=".NotificationActionReceiver">
+        <receiver android:name=".NotificationReceiver">
             <intent-filter>
                 <action android:name="com.example.www.androideverest.NOTIFICATION_ACTION" />
+                <action android:name="com.example.www.androideverest.RECEIVER_ACTION" />
             </intent-filter>
         </receiver>
     </application>

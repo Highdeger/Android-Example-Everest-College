@@ -54,5 +54,5 @@
         android:layout_height="wrap_content"
         android:tag="notification"
         android:onClick="goto_somewhere"
-        android:text="Notification" />
+        android:text="Notification + Broadcast Receiver" />
 </LinearLayout>
