@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
             case "sharedpref_test":
                 startActivity(new Intent(MainActivity.this, SharedPreferencesActivity.class));
                 break;
+
+            case "fore_service_test":
+                startActivity(new Intent(MainActivity.this, ForegroundServiceTestActivity.class));
+                break;
         }
     }
 }
