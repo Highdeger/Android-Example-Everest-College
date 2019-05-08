@@ -10,6 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 public class HttpRequestActivity extends AppCompatActivity {
 
     TextView request_result_textview;
@@ -23,6 +30,29 @@ public class HttpRequestActivity extends AppCompatActivity {
     }
 
     public void send_request_to_google(View view) {
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = "http://www.google.com";
+
+        StringRequest stringRequest = new StringRequest(
+                Request.Method.GET,
+                url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(HttpRequestActivity.this, "Successful Respond", Toast.LENGTH_SHORT).show();
+                        request_result_textview.setText(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(HttpRequestActivity.this, "Failed Respond", Toast.LENGTH_SHORT).show();
+                        request_result_textview.setText("Error - No Response");
+                    }
+                }
+        );
+
+        queue.add(stringRequest);
     }
 
     public void check_network(View view) {
