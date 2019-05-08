@@ -53,6 +53,8 @@ public class SharedPreferencesActivity extends AppCompatActivity {
     void update_list() {
         Map<String, ?> map = sharedPreferences.getAll();
 
+        items.clear();
+
         for (Map.Entry<String, ?> entry : map.entrySet()) {
             items.add(String.format(
                     "%s ---> %s",
