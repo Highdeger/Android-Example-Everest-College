@@ -52,7 +52,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:tag="notification"
+        android:tag="notification_broadcast_receiver"
         android:onClick="goto_somewhere"
         android:text="Notification + Broadcast Receiver" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="http_request_network_state"
+        android:onClick="goto_somewhere"
+        android:text="HTTP Request + Network State" />
 </LinearLayout>

@@ -40,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ForegroundServiceTestActivity.class));
                 break;
 
-            case "notification":
+            case "notification_broadcast_receiver":
                 startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+                break;
+
+            case "http_request_network_state":
+                startActivity(new Intent(MainActivity.this, HttpRequestActivity.class));
                 break;
         }
     }
