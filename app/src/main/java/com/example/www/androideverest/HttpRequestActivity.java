@@ -20,6 +20,8 @@ import com.android.volley.toolbox.Volley;
 public class HttpRequestActivity extends AppCompatActivity {
 
     TextView request_result_textview;
+    String send_request_to_google_TAG = "send_request_to_google";
+    RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class HttpRequestActivity extends AppCompatActivity {
     }
 
     public void send_request_to_google(View view) {
-        RequestQueue queue = Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(this);
         String url = "http://www.google.com";
 
         StringRequest stringRequest = new StringRequest(
@@ -51,8 +53,9 @@ public class HttpRequestActivity extends AppCompatActivity {
                     }
                 }
         );
+        stringRequest.setTag(send_request_to_google_TAG);
 
-        queue.add(stringRequest);
+        requestQueue.add(stringRequest);
     }
 
     public void check_network(View view) {
@@ -77,4 +80,11 @@ public class HttpRequestActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (requestQueue != null) {
+            requestQueue.cancelAll(send_request_to_google_TAG);
+        }
+    }
 }
