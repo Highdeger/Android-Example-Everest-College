@@ -28,6 +28,9 @@ public class NotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_notification_broadcast_receiver);
     }
 
     public void show_default(View view) {

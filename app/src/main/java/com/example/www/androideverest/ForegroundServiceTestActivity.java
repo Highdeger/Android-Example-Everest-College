@@ -15,6 +15,9 @@ public class ForegroundServiceTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foreground_service_test);
 
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_fore_service_test);
+
         editText = findViewById(R.id.service_input);
     }
 

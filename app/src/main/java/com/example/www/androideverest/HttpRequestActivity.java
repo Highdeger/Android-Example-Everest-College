@@ -28,6 +28,9 @@ public class HttpRequestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http_request);
 
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setTitle(R.string.activity_name_http_request_network_state);
+
         request_result_textview = findViewById(R.id.request_result_textview);
     }
 

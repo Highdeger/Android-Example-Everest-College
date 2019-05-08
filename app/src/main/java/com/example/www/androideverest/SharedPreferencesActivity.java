@@ -27,7 +27,7 @@ public class SharedPreferencesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shared_preferences);
 
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle(R.string.activity_name_shared_pref_test);
+            getSupportActionBar().setTitle(R.string.activity_name_sharedpref_test);
 
 //        Open or Create "sp-1" Table in Shared Preferences
         sharedPreferences = getSharedPreferences("sp-1", MODE_PRIVATE);
