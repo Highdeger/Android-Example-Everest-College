@@ -60,13 +60,23 @@ public class NotificationActivity extends AppCompatActivity {
                 PendingIntent.FLAG_ONE_SHOT);
 
         Notification notification = new NotificationCompat.Builder(NotificationActivity.this, CHANNEL_ID)
+//                مقدار دهی عنوان
                 .setContentTitle("My Title")
+//                مقدار دهی متن
                 .setContentText("My Content Text")
+//                مقدار دهی PendingIntent
                 .setContentIntent(pendingIntent)
+//                مشخص کردن آیکون
                 .setSmallIcon(R.drawable.ic_notification)
+//                برای بسته شدن هنگام کلیک شدن
                 .setAutoCancel(true)
+//                تبدیل نوتیفیکیشن به نوع Ongoing که اهمیت بالاتری نسبت به نوع معمولی دارد
                 .setOngoing(true)
+//               خاموش و روشن کردن نمایش زمان نوتیفیکیشن
                 .setShowWhen(true)
+//               ممقداردهی زمان نوتیفیکیش
+//                Calendar.getInstance().getTimeInMillis()
+//                به معنی زمانی که از ک تاریخ  حال البته به
                 .setWhen(Calendar.getInstance().getTimeInMillis())
                 .addAction(R.drawable.ic_settings, "Action 1", pending_action1)
                 .addAction(R.drawable.ic_settings_remote, "Action 2", pending_action2)
@@ -105,8 +115,11 @@ public class NotificationActivity extends AppCompatActivity {
                 .setSmallIcon(R.drawable.ic_settings_phone)
                 .setAutoCancel(true)
                 .setOngoing(true)
+//                این خط برای وصل کردن RemoteViews مربوط به نوتیفیکیشن در حالت گسترده شده
                 .setCustomBigContentView(expandedView)
+//                این خط برای وصل کردن RemoteViews مربوط به نوتیفیکیشن در حالت فشرده
                 .setCustomContentView(collapsedView)
+//               نوشتن خط بعدی برای استفاده از Layout خودمون توی نوتیفیکیشن اجباریه
                 .setStyle(new android.support.v4.app.NotificationCompat.DecoratedCustomViewStyle())
                 .build();
 
