@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.www.androideverest">
 
-    <!-- Permissions Declares -->
+    <!-- اعلام دسترسی های اپلیکیشن -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- اعلام اپلیکیشن و Component های درون آن -->
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -17,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Activity Declares -->
+        <!-- اعلام Activity های این اپلیکیشن -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +51,7 @@
             android:name=".SharedPreferencesActivity"
             android:parentActivityName=".MainActivity" />
 
-        <!-- Service Declares -->
+        <!-- اعلام Service های این اپلیکیشن -->
         <service
             android:name=".ServiceTest"
             android:enabled="true"
@@ -60,8 +61,9 @@
             android:enabled="true"
             android:exported="false" />
 
-        <!-- Broadcast Receiver Declares -->
+        <!-- اعلام Broadcast Receiver های این اپلیکیشن -->
         <receiver android:name=".NotificationReceiver">
+            <!-- اعلام سیگنال (اکشن) های این Broadcast Receiver -->
             <intent-filter>
                 <action android:name="com.example.www.androideverest.NOTIFICATION_ACTION" />
                 <action android:name="com.example.www.androideverest.RECEIVER_ACTION" />
