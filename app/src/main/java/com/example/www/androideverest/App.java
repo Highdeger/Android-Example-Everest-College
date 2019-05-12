@@ -6,6 +6,8 @@ import android.app.NotificationManager;
 import android.os.Build;
 
 public class App extends Application {
+
+//    این متغییر برای API های 26 و بالاتر ضروری است
     public static final String CHANNEL_ID = "ForegroundServiceTestChannel";
 
     @Override
@@ -16,9 +18,12 @@ public class App extends Application {
     }
 
     private void createNotificationChannel() {
+
+//        مقایسه API کاربر با API-26
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-            NotificationChannel serviceChannel = new NotificationChannel(
+//            ایجاد این شی برای API های 26 و بالاتر ضروری است
+            NotificationChannel notificationChannel = new NotificationChannel(
                     CHANNEL_ID,
                     "Foreground Service Test",
                     NotificationManager.IMPORTANCE_DEFAULT
@@ -26,8 +31,9 @@ public class App extends Application {
 
             NotificationManager manager = getSystemService(NotificationManager.class);
 
+//            ایجاد یک کانال برای نمایش نوتیفیکیشن ها که در API-26 و بالاتر ضروری است
             if (manager != null)
-                manager.createNotificationChannel(serviceChannel);
+                manager.createNotificationChannel(notificationChannel);
         }
     }
 }
