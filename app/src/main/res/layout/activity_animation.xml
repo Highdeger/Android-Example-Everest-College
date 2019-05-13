@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AnimationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fade In"
+            android:onClick="fade_in"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_fadein"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fade Out"
+            android:onClick="fade_out"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_fadeout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fade Cross"
+            android:onClick="fade_cross"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_fadecross"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blink"
+            android:onClick="blink"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_blink"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoom In"
+            android:onClick="zoom_in"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_zoomin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoom Out"
+            android:onClick="zoom_out"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_zoomout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotate Clock"
+            android:onClick="rotate_clock"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_rotateclock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotate Counter Clock"
+            android:onClick="rotate_counter_clock"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_rotatecounterclock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move"
+            android:onClick="move"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_move"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slide Up"
+            android:onClick="slide_up"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_slideup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slide Down"
+            android:onClick="slide_down"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_slidedown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bounce"
+            android:onClick="bounce"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_bounce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flip"
+            android:onClick="flip"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/animation_textview_flip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World"
+            android:textSize="@dimen/animation_textview_textsize"
+            android:paddingEnd="@dimen/animation_textview_padding"
+            android:paddingStart="@dimen/animation_textview_padding"
+            android:gravity="end|center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>

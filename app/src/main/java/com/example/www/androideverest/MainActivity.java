@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
             case "http_request_network_state":
                 startActivity(new Intent(MainActivity.this, HttpRequestActivity.class));
                 break;
+
+            case "animation":
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+                break;
         }
     }
 }

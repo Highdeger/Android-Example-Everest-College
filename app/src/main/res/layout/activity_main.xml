@@ -62,4 +62,11 @@
         android:tag="http_request_network_state"
         android:onClick="goto_somewhere"
         android:text="HTTP Request + Network State" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="animation"
+        android:onClick="goto_somewhere"
+        android:text="Animation" />
 </LinearLayout>
