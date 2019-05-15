@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnimationActivity"></activity>
+
         <!-- اعلام Activity های این اپلیکیشن -->
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -47,7 +47,15 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SharedPreferencesActivity"
-            android:parentActivityName=".MainActivity" /> <!-- اعلام Service های این اپلیکیشن -->
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".WidgetsListenerActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AnimationActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- اعلام Service های این اپلیکیشن -->
         <service
             android:name=".ServiceTest"
             android:enabled="true"
@@ -55,9 +63,10 @@
         <service
             android:name=".ForegroundServiceTest"
             android:enabled="true"
-            android:exported="false" /> <!-- اعلام Broadcast Receiver های این اپلیکیشن -->
-        <receiver android:name=".NotificationReceiver">
+            android:exported="false" />
 
+        <!-- اعلام Broadcast Receiver های این اپلیکیشن -->
+        <receiver android:name=".NotificationReceiver">
             <!-- اعلام سیگنال (اکشن) های این Broadcast Receiver -->
             <intent-filter>
                 <action android:name="com.example.www.androideverest.NOTIFICATION_ACTION" />

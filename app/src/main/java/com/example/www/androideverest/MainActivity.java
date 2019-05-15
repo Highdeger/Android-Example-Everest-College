@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
             case "animation":
                 startActivity(new Intent(MainActivity.this, AnimationActivity.class));
                 break;
+
+            case "widgets_listener":
+                startActivity(new Intent(MainActivity.this, WidgetsListenerActivity.class));
+                break;
         }
     }
 }

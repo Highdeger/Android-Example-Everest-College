@@ -69,4 +69,11 @@
         android:tag="animation"
         android:onClick="goto_somewhere"
         android:text="Animation" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="widgets_listener"
+        android:onClick="goto_somewhere"
+        android:text="Widgets Listener" />
 </LinearLayout>

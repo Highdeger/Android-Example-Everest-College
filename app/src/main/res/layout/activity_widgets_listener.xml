@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WidgetsListenerActivity">
+
+    <CheckBox
+        android:id="@+id/widgets_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a CheckBox"
+        android:textSize="22sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/widgets_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" >
+
+        <RadioButton
+            android:id="@+id/widgets_radio_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is RadioButton 1"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/widgets_radio_button_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is RadioButton 2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/widgets_radio_button_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is RadioButton 3"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SeekBar Value: "
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/widgets_seekbar_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Value"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SeekBar Status: "
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/widgets_seekbar_textview_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Status"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/widgets_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Main"
+            android:layout_weight="1"
+            android:onClick="progressbar_add_main_onclick"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Secondary"
+            android:layout_weight="1"
+            android:onClick="progressbar_add_secondary_onclick"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto Fill"
+            android:layout_weight="1"
+            android:onClick="progressbar_auto_fill"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/widgets_progressbar_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:scaleY="4"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <ToggleButton
+        android:id="@+id/widgets_togglebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Switch
+        android:id="@+id/widgets_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="This is a Switch"
+        android:switchPadding="48dp"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RatingBar Status: "
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/widgets_ratingbar_textview_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Status"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/widgets_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+
+</LinearLayout>
