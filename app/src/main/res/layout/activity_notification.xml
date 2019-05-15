@@ -24,4 +24,16 @@
         android:layout_height="wrap_content"
         android:onClick="send_broadcast_to_my_receiver"
         android:text="Send a Broadcast to NotificationReceiver" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="change_statusbar_color"
+        android:text="Make StatusBar Colored" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="change_statusbar_color_transparent"
+        android:text="Make StatusBar Transparent" />
 </LinearLayout>

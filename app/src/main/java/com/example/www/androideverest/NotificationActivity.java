@@ -5,11 +5,15 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -18,6 +22,8 @@ import java.util.Calendar;
 import static com.example.www.androideverest.App.CHANNEL_ID;
 
 public class NotificationActivity extends AppCompatActivity {
+
+    String statusbar_color = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,4 +202,59 @@ public class NotificationActivity extends AppCompatActivity {
 //        فعال کردن Broadcast Receiver با Intent
         sendBroadcast(intent);
     }
+
+
+//    متد برای رنگی کردن StatusBar
+    public void change_statusbar_color(View view) {
+
+//        مقایسه API کاربر با API-21
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+//            به دست آوردن شی Window از اکتیویتی فعلی
+            Window window = getWindow();
+
+//            ذخیره کردن رنگ فعلی در یک متغییر از نوع رشته
+//            رنگ به همراه کانال alpha ذخیره می شود
+//            #ffffffff
+            statusbar_color = "#" + Integer.toHexString(window.getStatusBarColor());
+//
+//            متد window.getStatusBarColor رنگ فعلی را به صورت عدد صحیح استخراج می کند
+//            متد Integer.toHexString عدد صحیح را به رشته ای در مبنای 16 تبدیل می کند
+
+//            تنظیم رنگ StatusBar
+            window.setStatusBarColor(Color.parseColor("#ffaa8822"));
+//
+//            برای استفاده از یک کد رنگ به صورت رشته
+//            Color.parseColor("#ffff00")
+//            برای به دست آوردن رنگ موجود در فایل colors.xml می توان خط زیر را استفاده کرد
+//            ContextCompat.getColor(this, R.color.myColor)
+
+        } else {
+            Toast.makeText(this, "This feature need Android 5.0 (API-21) or higher version.", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
+//    متد برای برگرداندن رنگ قبلی به StatusBar
+    public void change_statusbar_color_transparent(View view) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            Window window = getWindow();
+
+//            اگر متغییر statusbar_color خالی نبود یعنی رنگ را تغییر دادیم
+//            اگر خالی بود به معنی این است که هنوز اصلا رنگ را تغییر ندادیم
+            if (!statusbar_color.isEmpty()) {
+                window.setStatusBarColor(Color.parseColor(statusbar_color));
+            } else {
+                Toast.makeText(this, "You did not change StatusBar color, first change color.", Toast.LENGTH_LONG).show();
+            }
+
+        } else {
+            Toast.makeText(this, "This feature need Android 5.0 (API-21) or higher version.", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
 }
