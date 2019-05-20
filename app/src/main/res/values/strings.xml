@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Android Everest</string>
 
     <string name="activity_name_calculator">Calculator Project</string>
@@ -6,7 +6,7 @@
     <string name="activity_name_file_manager">File Manager Project</string>
     <string name="activity_name_service_test">Service</string>
     <string name="activity_name_sharedpref_test">SharedPreferences</string>
-    <string name="activity_name_fore_service_test">Foreground Service</string>
+    <string name="activity_name_fore_service_test" tools:ignore="ExtraTranslation">Foreground Service</string>
     <string name="activity_name_notification_broadcast_receiver">Notification + Broadcast Receiver</string>
     <string name="activity_name_http_request_network_state">HTTP Request + Network State</string>
     <string name="activity_name_animation">Animation</string>
