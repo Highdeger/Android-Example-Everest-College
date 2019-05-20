@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
             case "widgets_listener":
                 startActivity(new Intent(MainActivity.this, WidgetsListenerActivity.class));
                 break;
+
+            case "photo_picker":
+                startActivity(new Intent(MainActivity.this, PhotoPickerActivity.class));
+                break;
         }
     }
 }
