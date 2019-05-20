@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
             case "photo_picker":
                 startActivity(new Intent(MainActivity.this, PhotoPickerActivity.class));
                 break;
+
+            case "recycler_view":
+                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                break;
         }
     }
 }

@@ -29,4 +29,6 @@ dependencies {
 //    volley (http request for android) in 'jCenter' Repository
 //    https://bintray.com/android/android-utils/com.android.volley.volley/1.1.1
     implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

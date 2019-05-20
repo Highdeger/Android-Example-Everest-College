@@ -83,4 +83,11 @@
         android:tag="photo_picker"
         android:onClick="goto_somewhere"
         android:text="Photo Picker" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="recycler_view"
+        android:onClick="goto_somewhere"
+        android:text="RecyclerView" />
 </LinearLayout>
