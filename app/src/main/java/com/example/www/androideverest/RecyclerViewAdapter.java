@@ -16,8 +16,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     List<RecyclerViewModel> row_list;
 
-    public RecyclerViewAdapter(List<RecyclerViewModel> row_list) {
+    String which_layout = "";
+
+    public RecyclerViewAdapter(List<RecyclerViewModel> row_list, String which_layout) {
         this.row_list = row_list;
+        this.which_layout = which_layout;
     }
 
     @NonNull
@@ -26,7 +29,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View my_view = inflater.inflate(R.layout.recyclerview_row, parent, false);
+        View my_view;
+
+        switch (which_layout) {
+            case "row":
+                my_view = inflater.inflate(R.layout.recyclerview_row, parent, false);
+                break;
+
+            case "grid":
+                my_view = inflater.inflate(R.layout.recyclerview_grid, parent, false);
+                break;
+
+            default:
+                my_view = inflater.inflate(R.layout.recyclerview_row, parent, false);
+
+        }
 
         return new MyViewHolder(my_view);
     }
