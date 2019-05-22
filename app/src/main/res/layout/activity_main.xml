@@ -101,5 +101,12 @@
             android:onClick="goto_somewhere"
             android:tag="tabbed"
             android:text="Tab Fragments" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="dialog"
+            android:text="Dialog" />
     </LinearLayout>
 </ScrollView>

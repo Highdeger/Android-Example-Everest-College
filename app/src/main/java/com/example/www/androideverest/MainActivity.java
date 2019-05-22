@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
             case "tabbed":
                 startActivity(new Intent(MainActivity.this, TabbedActivity.class));
                 break;
+
+            case "dialog":
+                startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                break;
         }
     }
 }
