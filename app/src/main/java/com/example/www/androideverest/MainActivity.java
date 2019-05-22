@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             case "recycler_view":
                 startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
                 break;
+
+            case "tabbed":
+                startActivity(new Intent(MainActivity.this, TabbedActivity.class));
+                break;
         }
     }
 }

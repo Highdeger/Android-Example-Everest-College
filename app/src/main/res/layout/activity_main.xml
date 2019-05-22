@@ -1,93 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="calculator"
-        android:onClick="goto_somewhere"
-        android:text="Calculator" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="list_view"
-        android:onClick="goto_somewhere"
-        android:text="ListView" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="calculator"
+            android:text="Calculator" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="file_manager"
-        android:onClick="goto_somewhere"
-        android:text="File Manager" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="list_view"
+            android:text="ListView" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="service_test"
-        android:onClick="goto_somewhere"
-        android:text="Service Test" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="file_manager"
+            android:text="File Manager" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="sharedpref_test"
-        android:onClick="goto_somewhere"
-        android:text="SharedPreferences Test" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="service_test"
+            android:text="Service Test" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="fore_service_test"
-        android:onClick="goto_somewhere"
-        android:text="Foreground Service Test" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="sharedpref_test"
+            android:text="SharedPreferences Test" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="notification_broadcast_receiver"
-        android:onClick="goto_somewhere"
-        android:text="Notification + Broadcast Receiver" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="fore_service_test"
+            android:text="Foreground Service Test" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="http_request_network_state"
-        android:onClick="goto_somewhere"
-        android:text="HTTP Request + Network State" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="notification_broadcast_receiver"
+            android:text="Notification + Broadcast Receiver" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="animation"
-        android:onClick="goto_somewhere"
-        android:text="Animation" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="http_request_network_state"
+            android:text="HTTP Request + Network State" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="widgets_listener"
-        android:onClick="goto_somewhere"
-        android:text="Widgets Listener" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="animation"
+            android:text="Animation" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="photo_picker"
-        android:onClick="goto_somewhere"
-        android:text="Photo Picker" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="widgets_listener"
+            android:text="Widgets Listener" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:tag="recycler_view"
-        android:onClick="goto_somewhere"
-        android:text="RecyclerView" />
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="photo_picker"
+            android:text="Photo Picker" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="recycler_view"
+            android:text="RecyclerView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="tabbed"
+            android:text="Tab Fragments" />
+    </LinearLayout>
+</ScrollView>

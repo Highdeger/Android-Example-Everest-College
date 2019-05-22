@@ -65,7 +65,10 @@
         <activity
             android:name=".PhotoPickerActivity"
             android:parentActivityName=".MainActivity" />
-
+        <activity
+            android:name=".TabbedActivity"
+            android:parentActivityName=".MainActivity" />
+        <!---->
         <!-- اعلام Service های این اپلیکیشن -->
         <service
             android:name=".ServiceTest"
@@ -75,7 +78,7 @@
             android:name=".ForegroundServiceTest"
             android:enabled="true"
             android:exported="false" />
-
+        <!---->
         <!-- اعلام Broadcast Receiver های این اپلیکیشن -->
         <receiver android:name=".NotificationReceiver">
 
