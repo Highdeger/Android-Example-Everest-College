@@ -62,21 +62,24 @@ public class PhotoPickerActivity extends AppCompatActivity {
                         imageView.setImageBitmap(bitmap);
 
                     } catch (IOException e) {
-                        Log.i("OK", "4error");
+                        String temp = "Selected Image cannot be read." + "\nError Message:\n" + e.getMessage();
+                        Toast.makeText(this, temp, Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Log.i("OK", "5");
+                    Toast.makeText(this, "Selected Image is Null.", Toast.LENGTH_LONG).show();
                 }
                 break;
 
             case CAMERA_RESULT_CODE:
-
                 if (data != null) {
-                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-
-                    imageView.setImageBitmap(bitmap);
+                    Bundle data_bundle = data.getExtras();
+                    if (data_bundle != null) {
+                        Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                        imageView.setImageBitmap(bitmap);
+                    }
+                } else {
+                    Toast.makeText(this, "Captured Photo is Null.", Toast.LENGTH_LONG).show();
                 }
-
                 break;
         }
     }
