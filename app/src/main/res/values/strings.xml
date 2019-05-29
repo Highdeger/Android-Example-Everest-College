@@ -10,4 +10,7 @@
     <string name="activity_name_notification_broadcast_receiver">Notification + Broadcast Receiver</string>
     <string name="activity_name_http_request_network_state">HTTP Request + Network State</string>
     <string name="activity_name_animation">Animation</string>
+
+    <string name="navigation_drawer_open_desc">Open Drawer</string>
+    <string name="navigation_drawer_close_desc">Close Drawer</string>
 </resources>

@@ -20,8 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DialogActivity"></activity>
-        <!-- اعلام Activity های این اپلیکیشن -->
+        <activity android:name=".NavigationDrawerActivity"></activity>
+        <activity android:name=".DialogActivity" /> <!-- اعلام Activity های این اپلیکیشن -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

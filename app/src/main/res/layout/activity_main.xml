@@ -108,5 +108,12 @@
             android:onClick="goto_somewhere"
             android:tag="dialog"
             android:text="Dialog" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goto_somewhere"
+            android:tag="navigation_drawer"
+            android:text="Navigation Drawer" />
     </LinearLayout>
 </ScrollView>

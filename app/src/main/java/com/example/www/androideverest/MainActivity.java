@@ -71,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
             case "dialog":
                 startActivity(new Intent(MainActivity.this, DialogActivity.class));
                 break;
+
+            case "navigation_drawer":
+                startActivity(new Intent(MainActivity.this, NavigationDrawerActivity.class));
+                break;
         }
     }
 }
