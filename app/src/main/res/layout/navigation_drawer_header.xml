@@ -6,7 +6,7 @@
     android:gravity="top|center_horizontal">
 
     <ImageView
-        android:layout_width="250dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:src="@drawable/test006"
         android:adjustViewBounds="true"/>
