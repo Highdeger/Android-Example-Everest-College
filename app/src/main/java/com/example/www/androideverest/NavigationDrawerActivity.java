@@ -1,14 +1,16 @@
 package com.example.www.androideverest;
 
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawerActivity extends AppCompatActivity {
 
@@ -36,22 +38,22 @@ public class NavigationDrawerActivity extends AppCompatActivity {
                 switch (id) {
                     case R.id.item1:
                         Toast.makeText(NavigationDrawerActivity.this, "Item 1 Pressed.", Toast.LENGTH_SHORT).show();
-                        drawerLayout.closeDrawer(Gravity.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.item2:
                         Toast.makeText(NavigationDrawerActivity.this, "Item 2 Pressed.", Toast.LENGTH_SHORT).show();
-                        drawerLayout.closeDrawer(Gravity.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.item3:
                         Toast.makeText(NavigationDrawerActivity.this, "Item 3 Pressed.", Toast.LENGTH_SHORT).show();
-                        drawerLayout.closeDrawer(Gravity.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.item4:
                         Toast.makeText(NavigationDrawerActivity.this, "Item 4 Pressed.", Toast.LENGTH_SHORT).show();
-                        drawerLayout.closeDrawer(Gravity.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                 }
 

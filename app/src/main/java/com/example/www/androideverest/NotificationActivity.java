@@ -7,15 +7,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import java.util.Calendar;
 
@@ -179,7 +179,7 @@ public class NotificationActivity extends AppCompatActivity {
 //                این خط برای وصل کردن RemoteViews مربوط به نوتیفیکیشن در حالت فشرده
                 .setCustomContentView(collapsedView)
 //               نوشتن خط بعدی برای استفاده از Layout خودمون توی نوتیفیکیشن اجباریه
-                .setStyle(new android.support.v4.app.NotificationCompat.DecoratedCustomViewStyle())
+                .setStyle(new androidx.core.app.NotificationCompat.DecoratedCustomViewStyle())
                 .build();
 
 //        دسترسی به سرویس مربوط به نوتیفیکیشن و قرار دادن آن در یک شی

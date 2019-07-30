@@ -3,9 +3,10 @@ package com.example.www.androideverest;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.AlarmClock;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ImplicitIntentActivity extends AppCompatActivity {
 
