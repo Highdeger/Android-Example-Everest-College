@@ -1,5 +1,7 @@
 package com.example.www.androideverest;
 
+import android.animation.Animator;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +10,11 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +27,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     RecyclerViewAdapter adapter_linear, adapter_grid;
     DividerItemDecoration divider_row;
     Handler handler;
+    View.OnClickListener onItemClickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,19 @@ public class RecyclerViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler_view);
 
         recyclerView = findViewById(R.id.recyclerview_self);
+
+        onItemClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecyclerView.ViewHolder selected_ViewHolder = (RecyclerView.ViewHolder) v.getTag();
+                int position = selected_ViewHolder.getAdapterPosition();
+                RecyclerViewModel model = my_list.get(position);
+                String temp = String.format(Locale.getDefault(),
+                        "Title: %s\n\nSubtitle: %s\n\nID: %s",
+                        model.getTitle(), model.getSubtitle(), model.getIdentification());
+                Toast.makeText(RecyclerViewActivity.this, temp, Toast.LENGTH_LONG).show();
+            }
+        };
 
         my_list = new ArrayList<>();
         handler = new Handler();
@@ -42,8 +62,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         divider_row = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter_linear);
+
+        adapter_linear.setOnItemClickListener(onItemClickListener);
+        adapter_grid.setOnItemClickListener(onItemClickListener);
 
         recyclerView.addItemDecoration(divider_row);
     }

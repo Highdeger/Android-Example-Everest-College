@@ -75,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
             case "navigation_drawer":
                 startActivity(new Intent(MainActivity.this, NavigationDrawerActivity.class));
                 break;
+
+            case "implicit_intent":
+                startActivity(new Intent(MainActivity.this, ImplicitIntentActivity.class));
+                break;
         }
     }
 }

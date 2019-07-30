@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.www.androideverest">
+    <!--  -->
     <!-- اعلام دسترسی های اپلیکیشن -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -19,9 +21,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".NavigationDrawerActivity"></activity>
-        <activity android:name=".DialogActivity" /> <!-- اعلام Activity های این اپلیکیشن -->
+        android:theme="@style/AppTheme"> <!--  -->
+        <!-- اعلام Activity های این اپلیکیشن -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,6 +68,15 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".TabbedActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ImplicitIntentActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NavigationDrawerActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DialogActivity"
             android:parentActivityName=".MainActivity" /> <!--  -->
         <!-- اعلام Service های این اپلیکیشن -->
         <service

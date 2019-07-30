@@ -4,7 +4,9 @@ import android.content.Context;
 import android.graphics.ColorSpace;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,11 +16,11 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    List<RecyclerViewModel> row_list;
+    private List<RecyclerViewModel> row_list;
+    private String which_layout;
+    private View.OnClickListener onItemClickListener;
 
-    String which_layout = "";
-
-    public RecyclerViewAdapter(List<RecyclerViewModel> row_list, String which_layout) {
+    RecyclerViewAdapter(List<RecyclerViewModel> row_list, String which_layout) {
         this.row_list = row_list;
         this.which_layout = which_layout;
     }
@@ -62,13 +64,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return row_list.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    void setOnItemClickListener(View.OnClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView vh_imageView_icon, vh_imageView_photo;
         TextView vh_textView_title, vh_textView_subtitle, vh_textView_id;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
+
+            itemView.setTag(this);
+            itemView.setOnClickListener(onItemClickListener);
 
             vh_imageView_icon = itemView.findViewById(R.id.recyclerview_icon);
             vh_imageView_photo = itemView.findViewById(R.id.recyclerview_photo);
